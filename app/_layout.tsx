@@ -1,7 +1,7 @@
-import Entypo from "@expo/vector-icons/Entypo";
+import { theme } from "@/them";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import Octicons from "@expo/vector-icons/Octicons";
 import { Tabs } from "expo-router";
-import { theme } from "../them";
 
 export default function Layout() {
   return (
@@ -9,9 +9,9 @@ export default function Layout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Profile",
+          title: "Weight",
           tabBarIcon: ({ size, color }) => (
-            <Entypo name="user" size={size} color={color} />
+            <FontAwesome5 name="weight" size={size} color={color} />
           ),
         }}
       />

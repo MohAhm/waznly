@@ -1,5 +1,5 @@
+import { theme } from "@/them";
 import { StyleSheet, Text, View } from "react-native";
-import { theme } from "../them";
 
 export default function GraphScreen() {
   return (
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: theme.colorWhite,
+    backgroundColor: theme.backgroundColor,
   },
   text: {
     fontSize: 24,
