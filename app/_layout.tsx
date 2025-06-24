@@ -5,7 +5,19 @@ import { Tabs } from "expo-router";
 
 export default function Layout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: theme.colorDefault }}>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: theme.colorDefault,
+        tabBarInactiveTintColor: theme.tabBarInactiveTintColor,
+        tabBarStyle: {
+          height: 100,
+          paddingTop: 10,
+          borderTopWidth: 0,
+          backgroundColor: theme.tabBarBackgroundColor,
+        },
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
