@@ -1,50 +1,20 @@
-import { theme } from "@/them";
-import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
-import Octicons from "@expo/vector-icons/Octicons";
-import { Tabs } from "expo-router";
+import { Stack } from "expo-router";
 
 export default function Layout() {
   return (
-    <Tabs
-      screenOptions={{
-        headerShown: false,
-        tabBarActiveTintColor: theme.colorDefault,
-        tabBarInactiveTintColor: theme.tabBarInactiveTintColor,
-        tabBarStyle: {
-          height: 100,
-          paddingTop: 10,
-          borderTopWidth: 0,
-          backgroundColor: theme.tabBarBackgroundColor,
-        },
-      }}
-    >
-      <Tabs.Screen
-        name="index"
+    <Stack>
+      <Stack.Screen
+        name="(tabs)"
+        options={{ headerShown: false, animation: "fade" }}
+      />
+      <Stack.Screen
+        name="onboarding"
         options={{
-          title: "Weight",
-          tabBarIcon: ({ size, color }) => (
-            <FontAwesome5 name="weight" size={size} color={color} />
-          ),
+          presentation: "modal",
+          headerShown: false,
+          animation: "fade",
         }}
       />
-      <Tabs.Screen
-        name="graph"
-        options={{
-          title: "Graph",
-          tabBarIcon: ({ size, color }) => (
-            <Octicons name="graph" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="history"
-        options={{
-          title: "History",
-          tabBarIcon: ({ size, color }) => (
-            <Octicons name="clock" size={size} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
+    </Stack>
   );
 }
