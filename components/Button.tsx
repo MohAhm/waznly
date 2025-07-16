@@ -17,7 +17,15 @@ export default function Button({ title, onPress }: ButtonProps) {
   };
 
   return (
-    <Pressable onPress={handlePressed} style={styles.button}>
+    <Pressable
+      onPress={handlePressed}
+      style={(state) => {
+        if (state.pressed) {
+          return [styles.button, styles.buttonPressed];
+        }
+        return styles.button;
+      }}
+    >
       <Text style={styles.text}>{title}</Text>
     </Pressable>
   );
@@ -30,9 +38,12 @@ const styles = StyleSheet.create({
     color: theme.colorWhite,
   },
   button: {
-    borderRadius: 6,
+    borderRadius: 8,
     paddingVertical: 12,
     paddingHorizontal: 18,
     backgroundColor: theme.colorDefault,
+  },
+  buttonPressed: {
+    backgroundColor: theme.colorDarkDefault,
   },
 });
