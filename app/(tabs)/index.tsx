@@ -1,8 +1,9 @@
+import Button from "@/components/Button";
 import { useUserStore } from "@/store/userStore";
 import { theme } from "@/theme";
 import { setStatusBarStyle, StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   const toggleHasOnboarded = useUserStore((state) => state.toggleHasOnboarded);
@@ -31,5 +32,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: theme.colorWhite,
+    paddingBottom: 20,
   },
 });
