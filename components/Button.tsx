@@ -41,9 +41,9 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingVertical: 12,
     paddingHorizontal: 18,
-    backgroundColor: theme.colorDefault,
+    backgroundColor: theme.colorCornflowerBlue,
   },
   buttonPressed: {
-    backgroundColor: theme.colorDarkDefault,
+    backgroundColor: theme.colorDodgerBlue,
   },
 });

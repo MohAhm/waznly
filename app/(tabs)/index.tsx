@@ -21,9 +21,9 @@ export default function App() {
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           colors={[
-            theme.colorDefault,
+            theme.colorCornflowerBlue,
             theme.colorGrapeBlue,
-            theme.colorSkyBlue,
+            theme.colorMalibuBlue,
           ]}
           style={styles.card}
         >

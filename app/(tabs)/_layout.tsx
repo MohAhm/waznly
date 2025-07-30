@@ -1,8 +1,10 @@
 import { useUserStore } from "@/store/userStore";
 import { theme } from "@/theme";
+import { AntDesign } from "@expo/vector-icons";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import Octicons from "@expo/vector-icons/Octicons";
-import { Redirect, Tabs } from "expo-router";
+import { Link, Redirect, Tabs } from "expo-router";
+import { Pressable } from "react-native";
 
 export default function Layout() {
   const hasFinishedOnboarding = useUserStore(
@@ -16,15 +18,27 @@ export default function Layout() {
   return (
     <Tabs
       screenOptions={{
-        headerShown: false,
-        tabBarActiveTintColor: theme.colorDefault,
-        tabBarInactiveTintColor: theme.tabBarInactiveTintColor,
+        headerTitle: "",
+        headerTransparent: true,
+        tabBarActiveTintColor: theme.colorCornflowerBlue,
+        tabBarInactiveTintColor: theme.backgroundColorBlueHaze,
         tabBarStyle: {
           height: 100,
           paddingTop: 10,
           borderTopWidth: 0,
-          backgroundColor: theme.tabBarBackgroundColor,
+          backgroundColor: theme.backgroundColorShark,
         },
+        headerRight: () => (
+          <Link href="/add" asChild>
+            <Pressable hitSlop={20} style={{ marginRight: 18 }}>
+              <AntDesign
+                name="pluscircleo"
+                size={24}
+                color={theme.colorCornflowerBlue}
+              />
+            </Pressable>
+          </Link>
+        ),
       }}
     >
       <Tabs.Screen

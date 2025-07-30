@@ -1,3 +1,4 @@
+import { theme } from "@/theme";
 import { Stack } from "expo-router";
 
 export default function Layout() {
@@ -13,6 +14,15 @@ export default function Layout() {
           presentation: "modal",
           headerShown: false,
           animation: "fade",
+        }}
+      />
+      <Stack.Screen
+        name="add"
+        options={{
+          title: "Add Weight",
+          headerTintColor: theme.colorWhite,
+          headerTransparent: true,
+          presentation: "modal",
         }}
       />
     </Stack>
