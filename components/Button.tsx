@@ -1,7 +1,8 @@
 import { theme } from "@/theme";
 import * as Haptics from "expo-haptics";
 import React from "react";
-import { Platform, Pressable, StyleSheet, Text } from "react-native";
+import { Platform, StyleSheet, Text } from "react-native";
+import { Button as PaperButton } from "react-native-paper";
 
 type ButtonProps = {
   title: string;
@@ -17,17 +18,9 @@ export default function Button({ title, onPress }: ButtonProps) {
   };
 
   return (
-    <Pressable
-      onPress={handlePressed}
-      style={(state) => {
-        if (state.pressed) {
-          return [styles.button, styles.buttonPressed];
-        }
-        return styles.button;
-      }}
-    >
+    <PaperButton style={styles.button} mode="contained" onPress={handlePressed}>
       <Text style={styles.text}>{title}</Text>
-    </Pressable>
+    </PaperButton>
   );
 }
 
@@ -35,15 +28,13 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 18,
     fontWeight: "bold",
-    color: theme.colorWhite,
+    color: theme.colors.white,
   },
   button: {
     borderRadius: 8,
-    paddingVertical: 12,
-    paddingHorizontal: 18,
-    backgroundColor: theme.colorCornflowerBlue,
+    backgroundColor: theme.colors.primary,
   },
   buttonPressed: {
-    backgroundColor: theme.colorDodgerBlue,
+    backgroundColor: theme.colors.accent,
   },
 });

@@ -20,7 +20,7 @@ export default function Layout() {
         name="add"
         options={{
           title: "Add Weight",
-          headerTintColor: theme.colorWhite,
+          headerTintColor: theme.colors.white,
           headerTransparent: true,
           presentation: "modal",
         }}

@@ -20,13 +20,13 @@ export default function Layout() {
       screenOptions={{
         headerTitle: "",
         headerTransparent: true,
-        tabBarActiveTintColor: theme.colorCornflowerBlue,
-        tabBarInactiveTintColor: theme.backgroundColorBlueHaze,
+        tabBarActiveTintColor: theme.colors.primary,
+        tabBarInactiveTintColor: theme.colors.shark,
         tabBarStyle: {
           height: 100,
           paddingTop: 10,
           borderTopWidth: 0,
-          backgroundColor: theme.backgroundColorShark,
+          backgroundColor: theme.colors.surface,
         },
         headerRight: () => (
           <Link href="/add" asChild>
@@ -34,7 +34,7 @@ export default function Layout() {
               <AntDesign
                 name="pluscircleo"
                 size={24}
-                color={theme.colorCornflowerBlue}
+                color={theme.colors.primary}
               />
             </Pressable>
           </Link>

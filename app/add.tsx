@@ -12,12 +12,12 @@ export default function AddWeightScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.backgroundColorShark,
+    backgroundColor: theme.colors.surface,
     justifyContent: "center",
     alignItems: "center",
   },
   text: {
     fontSize: 24,
-    color: theme.colorWhite,
+    color: theme.colors.white,
   },
 });

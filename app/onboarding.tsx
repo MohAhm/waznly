@@ -26,10 +26,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: theme.backgroundColor,
+    backgroundColor: theme.colors.background,
   },
   text: {
     fontSize: 24,
-    color: theme.colorWhite,
+    color: theme.colors.white,
   },
 });
